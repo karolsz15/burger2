@@ -6,11 +6,11 @@ import PropTypes from 'prop-types';
 const Burger = props => {
 
     const {ingredients} = props;
-    // console.log(ingredients);
 
     let transformedIngredients = Object.keys( ingredients )
         .map( ingredientKey => {
             return [...Array( ingredients[ingredientKey] )].map( ( _, i ) => {
+                console.log(ingredients[ingredientKey]);
                 return <BurgerIngredient key={ingredientKey + i} type={ingredientKey} />;
             } );
         } )
